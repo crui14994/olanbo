@@ -3,10 +3,7 @@ const webpack = require("webpack");
 const glob = require("glob"); //glob，这个是一个全局的模块，动态配置多页面会用得着
 // html模板
 const htmlWebpackPlugin = require("html-webpack-plugin");
-//静态资源输出
-const copyWebpackPlugin = require("copy-webpack-plugin");
-//消除冗余的css
-const purifyCssWebpack = require("purifycss-webpack");
+
 
 // 获取ruls
 const rules = require("./webpack.rules.conf.js");
@@ -50,18 +47,6 @@ module.exports = {
     module: {
         rules: [...rules]
     },
-    plugins: [
-        //静态资源输出
-        new copyWebpackPlugin([{
-            from: path.resolve(__dirname, "../src/assets"),
-            to: './assets',
-            ignore: ['.*']
-        }]),
-        // 消除冗余的css代码
-        new purifyCssWebpack({
-            paths: glob.sync(path.join(__dirname, "../src/pages/*/*.html"))
-        }),
-    ],
     optimization: {
         splitChunks: {  //分割代码块
             cacheGroups: {  //缓存组 缓存公共代码
@@ -81,8 +66,9 @@ module.exports = {
             }
         }
     },
+    plugins: [
+    ],
 }
-
 //修改自动化配置页面
 var htmlArray = [];
 Object.keys(entrys).forEach(function (element) {
@@ -92,7 +78,6 @@ Object.keys(entrys).forEach(function (element) {
         chunks: ['vendor', 'commons', element]
     })
 })
-
 //自动生成html模板
 htmlArray.forEach((element) => {
     module.exports.plugins.push(new htmlWebpackPlugin(getHtmlConfig(element._html, element.chunks)));

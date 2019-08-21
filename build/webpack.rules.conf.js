@@ -29,9 +29,9 @@ const rules = [
     //     }
     // },
     {
-        test: /\.(css|scss|sass)$/,
-        use: process.env.NODE_ENV === "development" ? ["style-loader", "css-loader", "sass-loader", "postcss-loader"] :
-            [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "sass-loader"],
+        test: /\.(css|scss|sass|less)$/,
+        use: process.env.NODE_ENV === "development" ? ["style-loader", "css-loader", "postcss-loader","less-loader"] :
+            [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "less-loader"],
         include: /src/, //限制范围，提高打包速度
         exclude: /node_modules/
     },
@@ -51,7 +51,7 @@ const rules = [
             {
                 loader: 'image-webpack-loader', // 进行图片优化
             }
-        ]
+        ],
     },
     {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
