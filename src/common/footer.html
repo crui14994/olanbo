@@ -1,0 +1,106 @@
+<div class="footerMain container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-4 footer-message">
+            <p class="tel">
+                tel：028-61035165
+            </p>
+            <ul>
+                <li>
+                    公司总部：深圳市南山区大冲商务中心C1801-1806
+                </li>
+                <li>
+                    成都研发总部：四川省成都市香年广场2号楼1115
+                </li>
+                <li>
+                    工厂地址：广东省深圳市宝安区凤塘大道610号
+                </li>
+                <li>
+                    邮箱：chensonglin@olanboa.com
+                </li>
+            </ul>
+            <div class="row">
+                <div class="col-xs-6">
+                    <img class="img-responsive  lazyload" data-src="../../static/images/icon11.png" alt="">
+                </div>
+                <div class="col-xs-6">
+                    <img class="img-responsive  lazyload" data-src="../../static/images/icon12.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-7 col-md-8 footer-form">
+            <form id="footerForm" autocomplete="off">
+                <div class="row ">
+                    <div class="col-sm-12 col-md-4 form-item">
+                        <label for="userName"><span>*</span>姓名:</label>
+                        <input type="text" required placeholder="" id="userName" name="name">
+                    </div>
+                    <div class="col-sm-12 col-md-4 form-item">
+                        <label for="userEmail"><span>*</span>邮箱:</label>
+                        <input type="email" required placeholder="" id="userEmail" name="email">
+                    </div>
+                    <div class="col-sm-12 col-md-4 form-item">
+                        <label for="userTel"><span>*</span>电话:</label>
+                        <input type="tel" required placeholder="" id="userTel" name="tel">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 form-item02">
+                        <textarea class="" required placeholder="内容" rows="3" id="content" name="content"> </textarea>
+                    </div>
+                </div>
+                <div class="row btn-center">
+                    <p class="help-msg"></p>
+                    <a class="footer-btn" id="addMsg">提交</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <p class="copyright text-center">
+        Copyright © 2009-2018 版权所有
+        <a class="bold" href="https://www.olanboa.com/">
+            欧朗博
+        </a>
+        提供技术支持
+    </p>
+    <!-- 浮动栏 -->
+    <div class="float-box">
+        <ul>
+            <li id="contact">
+                <span class="iconfont icon-tubiao-"></span>
+                <div class="float-message">
+                    <ul>
+                        <li class="text-left">
+                            在线咨询 <span class="iconfont icon-close" id="closeBtn"></span>
+                        </li>
+                        <li class="text-center">
+                            <span class="iconfont icon-qq"></span>961468169
+                        </li>
+                        <li class="text-center">
+                            <span class="iconfont icon-phone"></span>028-61035165
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <span class="iconfont icon-upward" id="scrollTop"></span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">提示</h4>
+            </div>
+            <div class="modal-body">提交成功！</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">确定</button>
+                <!-- <button type="button" class="btn btn-primary">提交更改</button> -->
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
