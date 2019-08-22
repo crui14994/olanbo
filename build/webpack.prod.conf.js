@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require("webpack");
 const merge = require("webpack-merge");
-const glob = require("glob");
+const glob = require('glob-all');
 // 清除目录等
 const cleanWebpackPlugin = require("clean-webpack-plugin");
 //分离css，webpack4推荐的分离css的插件
@@ -58,10 +58,15 @@ const webpackConfigProd = {
         }),
         // 消除冗余的css代码
         new purifyCssWebpack({
-            paths: glob.sync(path.join(__dirname, "../src/*/*.html"))
+            paths: glob.sync(
+                [
+                    path.resolve(__dirname, "../src/**/*.html"), 
+                    path.resolve(__dirname, "../src/**/*.js")
+                ]
+            )
         }),
     ],
-    
+
 
 }
 module.exports = merge(webpackConfigBase, webpackConfigProd);

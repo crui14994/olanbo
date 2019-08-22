@@ -1,5 +1,3 @@
-import "../../static/css/reset.css";
-import "../../static/css/common.less";
 import "./index.less"
 
 //必须放在lazysizes.js加载前，设置lazysizes不自动执行，等数据加载后执行lazySizes.init();
