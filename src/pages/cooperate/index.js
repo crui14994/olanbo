@@ -4,12 +4,14 @@ import server from "../../utils/api"
 
 $(function () {
     //切换导航状态
-    $($(".nav-list >ul>li")[5]).addClass("nav-active").siblings().removeClass("nav-active");
-    $($(".menu >ul>li")[5]).addClass("nav-active").siblings().removeClass("nav-active");
+    $($(".nav-list >ul>li")[4]).addClass("nav-active").siblings().removeClass("nav-active");
+    $($(".menu >ul>li")[4]).addClass("nav-active").siblings().removeClass("nav-active");
     main.init();
     $('.carousel').carousel();
     new WOW().init();
 
+   
+   
 });
 
 var app = new Vue({
@@ -17,7 +19,13 @@ var app = new Vue({
     data: {
 
     },
+    created(){
+           
+    },
     mounted() {
         lazySizes.init();
     },
+    methods:{
+
+    }
 })

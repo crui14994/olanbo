@@ -1,0 +1,364 @@
+@import "../../static/css/reset.css";
+@import "../../static/css/common.less";
+@import "../../static/css/quill.bubble.css";
+.details {
+    .part01 {
+        .container{
+            padding: 20px 0;
+            border-bottom: solid 1px rgba(238, 238, 238, 1);
+            color        : #6B6B6B;
+            .breadcrumb {
+                font-size    : 13px;
+                background   : none;
+                display      : inline-block;
+                height       : 50px;
+                padding      : 0;
+                line-height  : 50px;
+                margin-bottom: 0;
+
+                a {
+                    color: #6B6B6B;
+                }
+
+                li.active {
+                    a {
+                        color: #FFB932;
+                    }
+                }
+            }
+
+            .breadcrumb>li+li:before {
+                color  : #CCCCCC;
+                content: "> ";
+                padding: 0 2px;
+            }
+        }
+    }
+    .part02 {
+        padding: 0 0 100px 0;
+
+        // height          : 1500px;
+        // background-color: black;
+        .carousel-indicators {
+            bottom: -15%;
+
+            >li {
+                width        : 15%;
+                height       : auto;
+                border       : 2px solid transparent;
+                border-radius: 0;
+                box-sizing   : border-box;
+                margin       : 0 15px;
+            }
+
+            .active {
+                border: 2px solid rgba(255, 185, 50, 1);
+            }
+        }
+
+        .carousel-small {
+
+            // width   : 420px;
+            // height  : 190px;
+            // position: absolute;
+            // right   : 10%;
+            // bottom  : 0;
+            
+            >a {
+                width           : 50px;
+                height          : 50px;
+                background-image: none;
+                background      : rgba(0, 0, 0, 0.2);
+                opacity         : 1;
+                line-height     : 50px;
+                display: inline-block;
+                top: 47%;
+                >span{
+                    font-size: 20px;
+                }
+            }
+            a:hover {
+                background: rgba(255, 185, 50, 1);
+                opacity   : 1;
+            }
+            .left{
+                left: -55px;
+            }
+            .right{
+                right: -55px;
+            }
+
+            .carousel-btn {
+                width   : 180px;
+                height  : 90px;
+                position: absolute;
+                top     : 0;
+                left    : -90px;
+
+                a {
+                    width           : 50%;
+                    height          : 100%;
+                    background-image: none;
+                    background      : rgba(0, 0, 0, 0.2);
+                    opacity         : 1;
+                    line-height     : 90px;
+
+                    >span {
+                        font-size: 20px;
+                    }
+                }
+
+                a:hover {
+                    background: rgba(255, 185, 50, 1);
+                    opacity   : 1;
+                }
+            }
+        }
+    }
+    .part03{
+        img{
+            max-width: 100%;
+        }
+        margin-top: 10px;
+        padding: 0;
+        p{
+            line-height: 24px;
+        }
+        .p3-tit{
+            font-size: 26px;
+        }
+        .p3-introduce{
+            margin-top: 40px;
+            >p:last-child{
+                font-size: 16px;
+                color: #6B6B6B;
+                margin-top: 15px;
+                line-height: 21px;
+            }
+        }
+        .params{
+            margin-top: 40px;
+            >ul{
+                li{
+                    font-size: 16px;
+                    color: #6B6B6B;
+                    margin-top: 15px;
+                    line-height: 26px;
+                }
+               
+            }
+        }
+        .now-buy{
+            margin-top: 20px;
+            a{
+                display: inline-block;
+                padding: 12px 68px;
+                font-size: 16px;
+                color: #ffff;
+                background:#8f8f8f;
+                cursor: pointer;
+            }
+            a:hover{
+                text-decoration: none;
+                background:#FFC400;
+            }
+        }
+        .fun-list{
+            margin-top: 40px;
+            margin-bottom: 80px;
+            >ul{
+                li{
+                    
+                    margin-top: 15px;
+                    font-size: 16px;
+                    color: #6B6B6B;
+                    line-height: 21px;
+                }
+               
+            }
+        }
+        .p3-item-tit{
+            font-size: 20px;
+        }
+    }
+}
+
+
+/* 中等屏幕 */
+@media (min-width:992px) and (max-width:1199px) {}
+
+/* 平板 */
+@media (min-width: 768px) and (max-width: 991px) {
+    .details {
+        .part01 {
+            .container{
+                padding: 0px 10px;
+                
+                font-size    : 12px;
+                .breadcrumb {
+                    font-size    : 12px;
+                    height       : 36px;
+                    line-height  : 36px;
+                }
+            }
+        }
+        .part02 {
+            padding: 0;
+            .carousel-indicators {
+                bottom: -17%;
+    
+                >li {
+                    width        : 20%;
+                    border       : 1px solid transparent;
+                    margin       : 0 3px;
+                }
+                .active {
+                    border: 1px solid rgba(255, 185, 50, 1);
+                }
+            }
+    
+            .carousel-small {
+                display: none;
+            }
+        }
+        .part03{
+            margin-top: 10px;
+            padding: 0 15px;
+            .p3-tit{
+                font-size: 16px;
+            }
+            .p3-introduce{
+                margin-top: 20px;
+                >p:last-child{
+                    font-size: 12px;
+                    margin-top: 5px;
+                    line-height: 18px;
+                }
+            }
+            .params{
+                margin-top: 20px;
+                >ul{
+                    li{
+                        font-size: 12px;
+                        margin-top: 5px;
+                        line-height: 18px;
+                    }
+                   
+                }
+            }
+            .now-buy{
+                margin-top: 20px;
+                a{
+                    padding: 10px 50px;
+                    font-size: 12px;
+                }
+            }
+            .fun-list{
+                margin-top: 20px;
+                margin-bottom: 40px;
+                >ul{
+                    li{
+                        
+                        margin-top: 3px;
+                        font-size: 12px;
+                        line-height: 21px;
+                    }
+                   
+                }
+            }
+            .p3-item-tit{
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+}
+
+/* 手机*/
+@media (max-width: 767px) {
+    .details {
+        .part01 {
+            .container{
+                padding: 0px 10px;
+                
+                font-size    : 12px;
+                .breadcrumb {
+                    font-size    : 12px;
+                    height       : 36px;
+                    line-height  : 36px;
+                }
+            }
+        }
+        .part02 {
+            padding: 0;
+            .carousel-indicators {
+                bottom: -15%;
+    
+                >li {
+                    width        : 20%;
+                    border       : 1px solid transparent;
+                    margin       : 0 3px;
+                }
+                .active {
+                    border: 1px solid rgba(255, 185, 50, 1);
+                }
+            }
+    
+            .carousel-small {
+                display: none;
+            }
+        }
+        .part03{
+            margin-top: 10px;
+            padding: 0 15px;
+            .p3-tit{
+                font-size: 16px;
+            }
+            .p3-introduce{
+                margin-top: 20px;
+                >p:last-child{
+                    font-size: 12px;
+                    margin-top: 5px;
+                    line-height: 18px;
+                }
+            }
+            .params{
+                margin-top: 20px;
+                >ul{
+                    li{
+                        font-size: 12px;
+                        margin-top: 5px;
+                        line-height: 18px;
+                    }
+                   
+                }
+            }
+            .now-buy{
+                margin-top: 20px;
+                a{
+                    padding: 10px 50px;
+                    font-size: 12px;
+                }
+            }
+            .fun-list{
+                margin-top: 20px;
+                margin-bottom: 40px;
+                >ul{
+                    li{
+                        
+                        margin-top: 3px;
+                        font-size: 12px;
+                        line-height: 21px;
+                    }
+                   
+                }
+            }
+            .p3-item-tit{
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,118 @@
+@import "../../static/css/reset.css";
+@import "../../static/css/common.less";
+
+.about {
+    .part01{
+        padding: 0 6%;
+        .img-responsive{
+            margin: 0 auto;
+        }
+        .p1-item{
+            position: relative;
+            .p1-txt{
+                // position: absolute;
+                // top: 50%;
+                // left: 50%;
+                // transform: translate(-50%,-50%);
+                
+                padding-top: 2%;
+                >p{
+                    color: #6B6B6B;
+                    font-size: 14px;
+                    line-height: 26px;
+                    text-indent: 2em;
+                }
+            }
+        }
+    }
+    .part02{
+        color: #6B6B6B;
+        padding-bottom: 80px;
+        .p2-tit{
+            >p{
+                font-size: 22px;
+            }
+        }
+        .p2-list{
+            padding-top: 35px;
+            font-size: 14px;
+            line-height: 44px;
+        }
+    }
+}
+
+
+/* 中等屏幕 */
+@media (min-width:992px) and (max-width:1199px) {
+}
+
+/* 平板 */
+@media (min-width: 768px) and (max-width: 991px) {
+    .about{
+        .part01{
+            .p1-item{
+                .p1-txt{
+                    padding-top: 4%;
+                    >p{
+                        font-size: 12px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+        .part02{
+            color: #6B6B6B;
+            padding-bottom: 80px;
+            .p2-tit{
+                >p{
+                    font-size: 16px;
+                
+                }
+            }
+            .p2-list{
+                padding-top: 15px;
+                font-size: 12px;
+                line-height: 24px;
+            }
+            .p2-list:last-child{
+                padding-top: 0;
+            }
+        }
+    }
+}
+
+/* 手机*/
+@media (max-width: 767px) {
+    .about{
+        .part01{
+            .p1-item{
+                .p1-txt{
+                    padding-top: 4%;
+                    >p{
+                        font-size: 12px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+        .part02{
+            color: #6B6B6B;
+            padding-bottom: 80px;
+            .p2-tit{
+                >p{
+                    font-size: 16px;
+                
+                }
+            }
+            .p2-list{
+                padding-top: 15px;
+                font-size: 12px;
+                line-height: 24px;
+            }
+            .p2-list:last-child{
+                padding-top: 0;
+            }
+        }
+    }
+
+}

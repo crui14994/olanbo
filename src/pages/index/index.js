@@ -2,6 +2,26 @@ import "./index.less"
 import main from "../../common/main"
 import server from "../../utils/api"
 
+$(function () {
+    main.init();
+    new WOW().init();
+
+    //切换导航状态
+    $($(".nav-list >ul>li")[0]).addClass("nav-active").siblings().removeClass("nav-active");
+    $($(".menu >ul>li")[0]).addClass("nav-active").siblings().removeClass("nav-active");
+    
+    $('.carousel').carousel();
+    $('#myCarousel').on('slide.bs.carousel', function () {
+        $(".crs-item").each(function (i) {
+            var b = $(this).attr("class").indexOf("active");
+            if (b != -1) {
+                $($("#crsUl li")[i]).show().siblings().hide();
+            }
+        })
+    });
+})
+
+
 var app = new Vue({
     el: '#app',
     data: {
@@ -13,22 +33,6 @@ var app = new Vue({
         exampleList: [], //案例列表
     },
     created() {
-        //切换导航状态
-        $($(".nav-list >ul>li")[0]).addClass("nav-active").siblings().removeClass("nav-active");
-        $($(".menu >ul>li")[0]).addClass("nav-active").siblings().removeClass("nav-active");
-
-        main.init();
-        $('.carousel').carousel();
-        new WOW().init();
-
-        $('#myCarousel').on('slide.bs.carousel', function () {
-            $(".crs-item").each(function (i) {
-                var b = $(this).attr("class").indexOf("active");
-                if (b != -1) {
-                    $($("#crsUl li")[i]).show().siblings().hide();
-                }
-            })
-        });
 
         this._getHomeInfo();
     },

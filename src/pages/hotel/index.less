@@ -1,0 +1,303 @@
+@import "../../static/css/reset.css";
+@import "../../static/css/common.less";
+.hotel {
+    .part01 {
+        #myCarousel {
+            .item {
+                position: relative;
+
+                .banner-box {
+                    color    : #fff;
+                    position : absolute;
+                    top      : 50%;
+                    width: 100%!important;
+                    transform: translateY(-50%);
+                    z-index  : 10;
+
+                    .part-tit {
+                        margin: 0;
+
+                        h3 {
+                            font-weight: bold;
+                            font-size  : 48px;
+                        }
+
+                        >p {
+                            color      : #fff;
+                            margin-top : 25px;
+                            font-size  : 14px;
+                            line-height: 28px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .part02 {
+    }
+
+    .part03 {
+        .container-fuild{
+            padding: 0 6%;
+            .p3-box{
+                margin: 0;
+                .p3-item{
+                    padding: 0;
+                    position: relative;
+                    .p3-item-txt{
+                        width: 100%!important;
+                        padding:15% 15px 0 15px;
+                        // position: absolute;
+                        // top: 50%;
+                        // transform: translateY(-50%);
+                        >p:first-child{
+                            font-size: 24px;
+                            color: #333333;
+                        }
+                        >p:last-child{
+                            margin-top: 50px;
+                            font-size: 16px;
+                            line-height: 30px;
+                            color: #6B6B6B;
+                        }
+                    }
+                }
+                
+                
+                .p3-item-clear{
+                    clear: both;
+                }
+            }
+        }
+    }
+
+    .part04 {
+        .container{
+            .p4-box{
+                >div{
+                    >P:first-child{
+                        >img{
+                            margin: 0 auto;
+                        }
+                    }
+                    >p:last-child{
+                        margin-top: 25px;
+                        font-size: 14px;
+                        color: #6B6B6B;
+                    }
+                }
+            }
+        }
+    }
+
+    .part05 {
+        .p5-box{
+            >p{
+                text-align: center;
+                margin: 50px 0 80px;
+                >a{
+                    display    : inline-block;
+                    margin     : 0 auto;
+                    font-size  : 16px;
+                    font-weight: bold;
+                    padding    : 15px 45px;
+                    background : #34C553;
+                    color      : #fff;
+                    cursor     : pointer;
+                }
+                >a:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+}
+
+
+/* 中等屏幕 */
+@media (min-width:992px) and (max-width:1199px) {
+    .hotel{
+        .part03 {
+            .container-fuild{
+                .p3-box{
+                    .p3-item{
+                        .p3-item-txt{
+                            padding:10% 15px 0% 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 平板 */
+@media (min-width: 768px) and (max-width: 991px) {
+    .hotel{
+        .part01 {
+            #myCarousel {
+                .item {
+                    .banner-box {
+                        .part-tit {
+                            h3 {
+                                font-weight: bold;
+                                font-size  : 18px;
+                            }
+    
+                            >p {
+                                margin-top : 15px;
+                                font-size  : 12px;
+                                line-height: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .part03 {
+            .container-fuild{
+                padding: 0 0%;
+                .part-tit{
+                    padding: 0 15px;
+                }
+                .p3-box{
+                    .p3-item{
+                        .p3-item-txt{
+                            width: 100%!important;
+                            padding:15% 15px 10% 15px;
+                            >p:first-child{
+                                font-size: 16px;
+                            }
+                            >p:last-child{
+                                margin-top: 25px;
+                                font-size: 12px;
+                                line-height: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .part04 {
+            .container{
+                .p4-box{
+                    padding: 20px 0 40px;
+                    >div{
+                        >P:first-child{
+                            >img{
+                                width: 30%;
+                                margin: 0 auto;
+                            }
+                        }
+                        >p:last-child{
+                            margin-top: 15px;
+                            font-size: 12px;
+                            line-height: 18px;
+                        }
+                    }
+                }
+            }
+        }
+        .part05 {
+            .p5-box{
+                >p{
+                    text-align: center;
+                    margin: 35px 0 50px;
+                    >a{
+                        font-size  : 12px;
+                        font-weight: bold;
+                        padding    : 10px 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 手机*/
+@media (max-width: 767px) {
+    .hotel{
+        .part01 {
+            #myCarousel {
+                .item {
+                    .banner-box {
+                        .part-tit {
+                            h3 {
+                                font-weight: bold;
+                                font-size  : 18px;
+                            }
+    
+                            >p {
+                                margin-top : 15px;
+                                font-size  : 12px;
+                                line-height: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .part03 {
+            .container-fuild{
+                padding: 0 0%;
+                .part-tit{
+                    padding: 0 15px;
+                }
+                .p3-box{
+                    .p3-item{
+                        .p3-item-txt{
+                            width: 100%!important;
+                            padding:5% 15px 10% 15px;
+                            // position: absolute;
+                            // top: 50%;
+                            // transform: translateY(-50%);
+                            >p:first-child{
+                                font-size: 16px;
+                                color: #333333;
+                            }
+                            >p:last-child{
+                                margin-top: 25px;
+                                font-size: 12px;
+                                line-height: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .part04 {
+            .container{
+                .p4-box{
+                    >div{
+                        >P:first-child{
+                            >img{
+                                width: 40%;
+                                margin: 0 auto;
+                            }
+                        }
+                        >p:last-child{
+                            margin-top: 15px;
+                            font-size: 12px;
+                            line-height: 18px;
+                        }
+                    }
+                }
+            }
+        }
+        .part05 {
+            .p5-box{
+                >p{
+                    text-align: center;
+                    margin: 25px 0 40px;
+                    >a{
+                        font-size  : 12px;
+                        font-weight: bold;
+                        padding    : 10px 15px;
+                    }
+                }
+            }
+        }
+    }
+}

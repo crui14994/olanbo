@@ -1,0 +1,305 @@
+@import "../../static/css/reset.css";
+@import "../../static/css/common.less";
+.cooperate {
+    .part01 {
+        #myCarousel {
+            .item {
+                position: relative;
+
+                .banner-box {
+                    position : absolute;
+                    top      : 40%;
+                    left     : 50%;
+                    transform: translate(-50%; -50%);
+                    color    : #fff;
+
+                    >p:first-child {
+                        font-size  : 48px;
+                        font-weight: bold;
+                        color      : #FFB932;
+                    }
+
+                    >p:nth-child(2) {
+                        font-size  : 16px;
+                        padding    : 30px 0 50px;
+                        line-height: 24px;
+                    }
+
+                    >p:last-child {
+                        >a {
+                            display   : inline-block;
+                            padding   : 15px 30px;
+                            color     : #fff;
+                            font-size : 20px;
+                            background: rgba(255, 185, 50, 1);
+                            cursor: pointer;
+                        }
+
+                        >a:hover {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .part02 {
+        .container-fuild {
+            padding      : 0 6%;
+            height       : 50px;
+            border-bottom: solid 1px rgba(238, 238, 238, 1);
+            color        : #6B6B6B;
+
+            .breadcrumb {
+                font-size    : 13px;
+                background   : none;
+                display      : inline-block;
+                height       : 50px;
+                padding      : 0;
+                line-height  : 50px;
+                margin-bottom: 0;
+
+                a {
+                    color: #6B6B6B;
+                }
+
+                li.active {
+                    a {
+                        color: #FFB932;
+                    }
+                }
+            }
+
+            .breadcrumb>li+li:before {
+                color  : #CCCCCC;
+                content: "> ";
+                padding: 0 2px;
+            }
+        }
+    }
+
+    .part03 {
+        padding-bottom: 80px;
+
+        .p3-box {
+            margin-left : -45px;
+            margin-right: -45px;
+
+            >div {
+                padding: 0 45px;
+
+                .p3-item {
+                    background   : rgba(255, 255, 255, 1);
+                    border       : 1px solid rgba(215, 219, 232, 1);
+                    border-radius: 10px;
+                    overflow     : hidden;
+                    position     : relative;
+                    top          : 0;
+                    transition   : all .3s;
+                    box-shadow   : 0px 0px 10px 0px rgba(0, 0, 0, 0);
+
+                    >img {
+                        padding: 30px 0 15px 0;
+                    }
+
+                    >p:nth-child(2) {
+                        font-size    : 16px;
+                        margin-bottom: 30px;
+                        color        : #6B6B6B;
+                    }
+
+                    >p:nth-child(3) {
+                        font-size    : 22px;
+                        color        : #fff;
+                        padding      : 15px 0;
+                        width        : 100%;
+                        background   : #FFB932;
+                        border-radius: 0px 0px 10px 10px;
+                    }
+                }
+
+                .p3-item:hover {
+                    top       : -3px;
+                    border    : 1px solid transparent;
+                    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+                }
+            }
+        }
+    }
+
+}
+
+
+/* 中等屏幕 */
+@media (min-width:992px) and (max-width:1199px) {}
+
+/* 平板 */
+@media (min-width: 768px) and (max-width: 991px) {
+    .cooperate {
+        .part01 {
+            #myCarousel {
+                .item {
+                    .banner-box {
+
+                        top      : 50%;
+                        left     : 20%;
+                        transform: translate(-15%; -50%);
+
+                        >p:first-child {
+                            font-size: 18px;
+                        }
+
+                        >p:nth-child(2) {
+                            font-size  : 12px;
+                            padding    : 15px 0 20px;
+                            line-height: 18px;
+                        }
+
+                        >p:last-child {
+                            >a {
+                                display  : inline-block;
+                                padding  : 8px 15px;
+                                color    : #fff;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .part02 {
+            .container-fuild {
+                font-size: 12px;
+                height   : 36px;
+
+                .breadcrumb {
+                    font-size  : 12px;
+                    height     : 36px;
+                    line-height: 36px;
+                }
+            }
+        }
+        .part03 {
+            padding-bottom: 40px;
+
+            .p3-box {
+                margin-left : -15px;
+                margin-right: -15px;
+
+                >div {
+                    padding: 10px 25px;
+
+                    .p3-item {
+                        >img {
+                            padding: 15px 0 10px 0;
+                        }
+
+                        >p:nth-child(2) {
+                            font-size    : 12px;
+                            margin-bottom: 15px;
+                        }
+
+                        >p:nth-child(3) {
+                            font-size: 16px;
+                            padding  : 10px 0;
+                        }
+                    }
+
+                    .p3-item:hover {
+                        top       : -3px;
+                        border    : 1px solid transparent;
+                        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* 手机*/
+@media (max-width: 767px) {
+    .cooperate {
+        .part01 {
+            #myCarousel {
+                .item {
+                    .banner-box {
+
+                        top      : 50%;
+                        left     : 20%;
+                        transform: translate(-15%; -50%);
+
+                        >p:first-child {
+                            font-size: 18px;
+                        }
+
+                        >p:nth-child(2) {
+                            font-size  : 12px;
+                            padding    : 5px 0 10px;
+                            line-height: 18px;
+                        }
+
+                        >p:last-child {
+                            >a {
+                                display  : inline-block;
+                                padding  : 8px 15px;
+                                color    : #fff;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .part02 {
+            .container-fuild {
+                font-size: 12px;
+                height   : 36px;
+
+                .breadcrumb {
+                    font-size  : 12px;
+                    height     : 36px;
+                    line-height: 36px;
+                }
+            }
+        }
+
+        .part03 {
+            padding-bottom: 40px;
+
+            .p3-box {
+                margin-left : -15px;
+                margin-right: -15px;
+
+                >div {
+                    padding: 10px 25px;
+
+                    .p3-item {
+                        >img {
+                            padding: 15px 0 10px 0;
+                        }
+
+                        >p:nth-child(2) {
+                            font-size    : 12px;
+                            margin-bottom: 15px;
+                        }
+
+                        >p:nth-child(3) {
+                            font-size: 16px;
+                            padding  : 10px 0;
+                        }
+                    }
+
+                    .p3-item:hover {
+                        top       : -3px;
+                        border    : 1px solid transparent;
+                        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+                    }
+                }
+            }
+        }
+    }
+
+}
