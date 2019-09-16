@@ -1,7 +1,5 @@
 // loading动画
-export function loadingEvent() {
-    //是否显示加载动画
-    let isLoading = true;
+export function loadingEvent(isLoading) {
     //loading加载动画
     $(document).ajaxSend(function (event, xhr) {
         xhr.setRequestHeader("devType", "web");

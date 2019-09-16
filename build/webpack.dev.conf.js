@@ -14,11 +14,11 @@ const webpackConfigDev = {
     devServer: {
         contentBase: path.resolve(__dirname, '../src'),
         publicPath: '/',
-        host: "localhost",
-        port: "8090",
+        host: "192.168.101.56",
+        port: "8080",
         overlay: true, // 浏览器页面上显示错误
         open: true, // 开启浏览器
-        inline: true,//打包后加入一个websocket客户端
+        inline: true,
         hot: true,//热加载
     },
     plugins: [

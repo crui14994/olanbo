@@ -9,7 +9,8 @@ import 'lazysizes';
 
 import {loadingEvent } from "../utils/index";
 
-loadingEvent();
+//值为是否显示加载动画
+loadingEvent(false);
 
 class Main {
     constructor() {

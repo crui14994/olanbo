@@ -51,14 +51,12 @@ var app = new Vue({
         },
         //获取下一页设备列表
         _getNextDevList(){
-            isLoading = false;
             let options = {
                 pageNum: this.nowPage+1,
                 pageSize: this.pageNum,
                 sysTypeId: this.sysTypeId
             };
             server.getDevList(options).then(res => {
-                isLoading = true;
                 const { code } = res;
                 if (code === 200) {
                     this.nextData = res.data.records;
