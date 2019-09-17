@@ -89,6 +89,8 @@ class Servers {
             })
         })
     }
+
+
     //获取解决方案
     getSolution(options) {
         return new Promise((resolve, reject) => {
@@ -116,6 +118,8 @@ class Servers {
             })
         })
     }
+
+    
     // 获取解决方案详情
     getSolutionInfo(id) {
         return new Promise((resolve, reject) => {

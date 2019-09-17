@@ -14,11 +14,12 @@ $(function () {
 var app = new Vue({
     el: '#app',
     data: {
-        pageNum:1,
-        pageSize:1000,
-        typeId:null, //当前选择的类型
+        pageNum: 1,
+        pageSize: 1000,
+        typeId: null, //当前选择的类型
+        allData:[],  //获取到的所有数据
         tableData: [], //当前 展示的数据
-        solutionTypeList:[], //解决方案类型
+        solutionTypeList: [], //解决方案类型
     },
     created() {
         this._getSolution();
@@ -29,30 +30,37 @@ var app = new Vue({
     },
     methods: {
         //选择类型
-        checkType(id){
-            this.typeId=id;
-            this._getSolution();
+        checkType(id) {
+            this.typeId = id;
+            if(id){
+                this.tableData = this.allData.filter(item=>{
+                    return item.typeId === this.typeId;
+                })
+            }else{
+                this.tableData = this.allData;
+            }
         },
         //获取解决方案
         _getSolution() {
             let options = {
                 pageNum: this.pageNum,
                 pageSize: this.pageSize,
-                typeId:this.typeId,
+                typeId: this.typeId,
             };
             server.getSolution(options).then(res => {
                 let { code } = res;
                 if (code == 200) {
                     let { records } = res.data;
-                    this.tableData = records.reverse();
+                    this.allData = records.reverse();
+                    this.tableData = this.allData;
                 } else if (code == 300) {
                     this.tableData = [];
                 }
             });
         },
         //获取解决方案类型列表
-        _getSolutionType(){
-            server.getSolutionType().then(res=>{
+        _getSolutionType() {
+            server.getSolutionType().then(res => {
                 let { code } = res;
                 if (code == 200) {
                     this.solutionTypeList = res.data;

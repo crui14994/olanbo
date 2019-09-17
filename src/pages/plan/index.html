@@ -112,7 +112,7 @@
                     <div class="row wow fadeInUp">
                         <div class="col-xs-6  p3-item" v-for="(item,index) in tableData" :key="index">
                             <div class="p3-item-img">
-                                    <a ><img class="img-responsive  lazyload" :data-src="item.imgUrl" :alt="item.title"></a>
+                                    <a ><img class="img-responsive  lazyload" :src="item.imgUrl" :alt="item.title"></a>
                                 <a :href="'/pDetail.html?id='+item.id"  class="iconfont icon-jia"></a>
                             </div>
                             <div class="p3-item-layout text-center ">

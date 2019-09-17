@@ -54,6 +54,7 @@
         <div class="container-box details">
             <div class="header_box">
                 #include("../../common/header.html")
+            </div>
             <!-- 面包屑 -->
             <section class="part01">
                 <div class="container">
@@ -64,61 +65,9 @@
                     </ul>
                 </div>
             </section>
-            <!-- banner -->
-            <!-- <section class="part02 container">
-                <div id="myCarousel" class="carousel slide">
-                    <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" :data-slide-to="index" v-for="(item,index) in bannerImg"
-                            :key="index" :class="{active:index==0}">
-                            <a><img class="img-responsive" :src="item.imgUrl.mobile" :alt="item.alt"></a>
-                        </li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="item  crs-item" v-for="(item,index) in bannerImg" :key="index"
-                            :class="{active:index==0}">
-                            <img class="hidden-sm hidden-md hidden-lg" :src="item.imgUrl.mobile" :alt="item.alt">
-                            <img class="hidden-xs" :src="item.imgUrl.pc" :alt="item.alt">
-                        </div>
-                    </div>
-                    <div class="carousel-small">
-                        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
-                            <span class="iconfont icon-return"></span></a>
-                        <a class="carousel-control right" href="#myCarousel" data-slide="next">
-                            <span class="iconfont icon-next02"></span>
-                        </a>
-                    </div>
-
-                </div>
-            </section> -->
             <!-- 产品内容 -->
             <section class="part03 container ql-editor" v-html="activeData.htmlContent">
-                <!-- <p class="p3-tit" v-text="productDetail.tit"></p>
-                <div class="p3-introduce">
-                    <p class="p3-item-tit">
-                        产品介绍：
-                    </p>
-                    <p v-text="productDetail.introduce"></p>
-                </div>
-                <div class="params">
-                    <p class="p3-item-tit">
-                        规格参数：
-                    </p>
-                    <ul>
-                        <li v-for="(item,index) in productDetail.params" :key="index" v-text="item"></li>
-                    </ul>
-                </div>
-                <p class="now-buy">
-                    <a>点击购买</a>
-                </p>
-                <div class="fun-list">
-                    <p class="p3-item-tit">
-                        产品功能：
-                    </p>
-                    <ul>
-                            <li v-for="(item,index) in productDetail.funList" :key="index" v-text="item"></li>
-                    </ul>
-                </div> -->
-
+           
             </section>
 
             <div class="footer_box">
