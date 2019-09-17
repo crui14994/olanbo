@@ -17,14 +17,13 @@ $(function () {
 var app = new Vue({
     el: '#app',
     data: {
-        // active: 0, //当前导航的序列
         nowPage: 1,//当前显示的页码
         pageNum: 6,//每一页要显示的数量
         total: 0, //总共有多少条数据
         SysType: [], //设备类型数组
         sysTypeId: null, //选中的设备类型
         activeData: null, //当前 展示的数据
-        nextData: null //预加载的下一页数据
+        cacheData:{}, //缓存的数据
     },
     created() {
         this._getSysType();
@@ -49,7 +48,7 @@ var app = new Vue({
                 }
             })
         },
-        //获取下一页设备列表
+        //获取下一页设备列表缓存进入数据中
         _getNextDevList(){
             let options = {
                 pageNum: this.nowPage+1,
@@ -59,9 +58,7 @@ var app = new Vue({
             server.getDevList(options).then(res => {
                 const { code } = res;
                 if (code === 200) {
-                    this.nextData = res.data.records;
-                } else if (code === 300) {
-                    this.nextData = null;
+                    this._cacheData(options.pageNum,res.data.records)
                 }
             })
         },
@@ -72,12 +69,19 @@ var app = new Vue({
                 pageSize: this.pageNum,
                 sysTypeId: this.sysTypeId
             };
+            //如果缓存数据中有当前页的数据就从缓存数据中获取，否则去请求数据
+            if(this.cacheData[this.nowPage] !== undefined){
+                this.activeData = this.cacheData[this.nowPage];
+                return;
+            }
             server.getDevList(options).then(res => {
                 const { code } = res;
                 if (code === 200) {
                     this.activeData = res.data.records;
+                    //缓存当前页的数据
+                    this._cacheData(this.nowPage,this.activeData);
                     this.total = res.data.total;
-                    // 获取下一页设备列表
+                    //获取下一页数据进行缓存
                     this._getNextDevList();
                 } else if (code === 300) {
                     this.activeData = [];
@@ -87,6 +91,8 @@ var app = new Vue({
         },
         //选择分类
         checkSysType(id) {
+            //清空缓存数据
+            this.cacheData = {};
             this.nowPage = 1;
             this.sysTypeId = id;
             this._getDevList();
@@ -98,11 +104,7 @@ var app = new Vue({
         nextPage() {
             if (this.nowPage < this.totalPage) {
                 this.nowPage++;
-                if (this.nextData != null) {
-                    this.activeData = this.nextData;
-                    this._getNextDevList();
-                }
-
+                this._getDevList();
             }
         },
         prevPage() {
@@ -110,6 +112,11 @@ var app = new Vue({
                 this.nowPage--;
                 this._getDevList();
             }
+        },
+        // 缓存数据
+        _cacheData(num,datas){
+            this.cacheData[num] = datas;
+            console.log(num,this.cacheData)
         }
     }
 })
