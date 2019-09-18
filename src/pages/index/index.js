@@ -58,7 +58,7 @@ var app = new Vue({
                         playsinline: true,
                         height: "100%",
                         width: "100%",
-                        poster: '../../assets/images/home/pg-1-1.png'
+                        poster: require('../../assets/images/home/pg-1-1.png')
                     });
                     this.contrlVodeo();
                     // 已推荐的优质单品

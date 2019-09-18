@@ -3,12 +3,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const rules = [
     {
-        // 得到jquery模块的绝对路径
-        test: require.resolve('jquery'),
-        // 将jquery绑定为window.jQuery
-        loader: 'expose-loader?jQuery!expose-loader?$'
-    },
-    {
         test: /\.js$/,
         exclude: /(node_modules)/,
         include: /src/, //限制范围，提高打包速度
@@ -22,18 +16,27 @@ const rules = [
             }
         ]
     },
-    // {
-    //     test: /\.(html)$/,
-    //     use: {
-    //         loader: 'html-loader'
-    //     }
-    // },
     {
         test: /\.(css|scss|sass|less)$/,
-        use: process.env.NODE_ENV === "development" ? ["style-loader", "css-loader", "postcss-loader","less-loader"] :
+        use: process.env.NODE_ENV === "development" ? ["style-loader", "css-loader", "postcss-loader", "less-loader"] :
             [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "less-loader"],
         include: /src/, //限制范围，提高打包速度
         exclude: /node_modules/
+    },
+    {
+        test: /\.(htm|html)$/i,
+        use: [
+            { 
+                loader: 'html-withimg-loader?exclude=/static/',
+             },
+            {
+                loader: 'html-loader',
+                options: {
+                    attrs: ['img:src', 'img:data-src']
+                }
+            },
+            
+        ]
     },
     {
         test: /\.(png|svg|jpg|gif|jpeg|ico)$/,
@@ -42,22 +45,35 @@ const rules = [
                 loader: "url-loader",
                 options: {
                     limit: 10000, //小于这个时将会已base64位图片打包处理
-                    // 图片文件输出的文件夹
-                    publicPath: "../images",
-                    outputPath: "images",
-                    name: '[name].[hash].[ext]'
+                    name: 'images/[name].[hash].[ext]'
                 }
             },
             {
                 loader: 'image-webpack-loader', // 进行图片优化
             }
-        ],
+        ]
+    },
+    {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+            limit: 10000,
+            name: 'fonts/[name].[hash].[ext]',
+        }
     },
     {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: [
             'file-loader'
         ]
+    },
+    {
+        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+            limit: 10000,
+            name: 'media/[name].[hash:7].[ext]'
+        }
     }
 
 ];
