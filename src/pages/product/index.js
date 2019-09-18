@@ -116,7 +116,6 @@ var app = new Vue({
         // 缓存数据
         _cacheData(num,datas){
             this.cacheData[num] = datas;
-            console.log(num,this.cacheData)
         }
     }
 })
