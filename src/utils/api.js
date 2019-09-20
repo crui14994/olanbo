@@ -1,7 +1,6 @@
 // api
-// const BASE_URL = "http://127.0.0.1:1010";
-// const BASE_URL = "http://192.168.101.110:8888";
-const BASE_URL = "http://doc.52pkmir.cn";
+const BASE_URL = "http://47.105.45.120:8888";
+// const BASE_URL = "http://smart.olanboa.com/api";
 
 class Servers {
     constructor(BASE_URL) {
