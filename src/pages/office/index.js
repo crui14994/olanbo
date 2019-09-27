@@ -16,38 +16,38 @@ var app = new Vue({
     data: {
         p4List:[
             {
-                imgUrl:'../../assets/images/office/p4-01.png',
-                hoverUrl:"../../assets/images/office/p4-01a.png",
+                imgUrl:require("@/assets/images/office/p4-01.png"),
+                hoverUrl:require("@/assets/images/office/p4-01a.png"),
                 txt:'电脑控制平台',
                 alt:"电脑控制平台"
             },
             {
-                imgUrl:'../../assets/images/office/p4-02.png',
-                hoverUrl:"../../assets/images/office/p4-02a.png",
+                imgUrl:require("@/assets/images/office/p4-02.png"),
+                hoverUrl:require("@/assets/images/office/p4-02a.png"),
                 txt:'手机APP',
                 alt:"手机APP"
             },
             {
-                imgUrl:'../../assets/images/office/p4-03.png',
-                hoverUrl:"../../assets/images/office/p4-03a.png",
+                imgUrl:require("@/assets/images/office/p4-03.png"),
+                hoverUrl:require("@/assets/images/office/p4-03a.png"),
                 txt:'智能面板',
                 alt:"智能面板"
             },
             {
-                imgUrl:'../../assets/images/apartment/p4-06.png',
-                hoverUrl:"../../assets/images/apartment/p4-06.png",
+                imgUrl:require("@/assets/images/apartment/p4-06.png"),
+                hoverUrl:require("@/assets/images/apartment/p4-06.png"),
                 txt:'智能云',
                 alt:"智能云"
             },
             {
-                imgUrl:'../../assets/images/office/p4-05.png',
-                hoverUrl:"../../assets/images/office/p4-05a.png",
+                imgUrl:require("@/assets/images/office/p4-05.png"),
+                hoverUrl:require("@/assets/images/office/p4-05a.png"),
                 txt:'ZigBee网关',
                 alt:"ZigBee网关"
             },
             {
-                imgUrl:'../../assets/images/office/p4-06.png',
-                hoverUrl:"../../assets/images/office/p4-06a.png",
+                imgUrl:require("@/assets/images/office/p4-06.png"),
+                hoverUrl:require("@/assets/images/office/p4-06a.png"),
                 txt:'Wi-Fi',
                 alt:"Wi-Fi"
             },

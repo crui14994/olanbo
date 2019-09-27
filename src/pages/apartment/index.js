@@ -16,74 +16,74 @@ var app = new Vue({
     data: {
         p4List:[
             {
-                imgUrl:'../../assets/images/apartment/p4-01.png',
-                hoverUrl:"../../assets/images/apartment/p4-01a.png",
+                imgUrl:require("@/assets/images/apartment/p4-01.png"),
+                hoverUrl:require("@/assets/images/apartment/p4-01a.png"),
                 txt:'智能面板',
                 alt:"智能面板"
             },
             {
-                imgUrl:'../../assets/images/apartment/p4-02.png',
-                hoverUrl:"../../assets/images/apartment/p4-02a.png",
+                imgUrl:require("@/assets/images/apartment/p4-02.png"),
+                hoverUrl:require("@/assets/images/apartment/p4-02a.png"),
                 txt:'手机APP',
                 alt:"手机APP"
             },
             {
-                imgUrl:'../../assets/images/apartment/p4-03.png',
-                hoverUrl:"../../assets/images/apartment/p4-03a.png",
+                imgUrl:require("@/assets/images/apartment/p4-03.png"),
+                hoverUrl:require("@/assets/images/apartment/p4-03a.png"),
                 txt:'电脑控制平台',
                 alt:"电脑控制平台"
             },
             {
-                imgUrl:'../../assets/images/apartment/p4-04.png',
-                hoverUrl:"../../assets/images/apartment/p4-04a.png",
+                imgUrl:require("@/assets/images/apartment/p4-04.png"),
+                hoverUrl:require("@/assets/images/apartment/p4-04a.png"),
                 txt:'微信APP移动端',
                 alt:"微信APP移动端"
             },
             {
-                imgUrl:'../../assets/images/apartment/p4-05.png',
-                hoverUrl:"../../assets/images/apartment/p4-05a.png",
+                imgUrl:require("@/assets/images/apartment/p4-05.png"),
+                hoverUrl:require("@/assets/images/apartment/p4-05a.png"),
                 txt:'电脑控制后台',
                 alt:"电脑控制后台"
             },
             {
-                imgUrl:'../../assets/images/apartment/p4-06.png',
-                hoverUrl:"../../assets/images/apartment/p4-06.png",
+                imgUrl:require("@/assets/images/apartment/p4-06.png"),
+                hoverUrl:require("@/assets/images/apartment/p4-06.png"),
                 txt:'智能云',
                 alt:"智能云"
             },
             {
-                imgUrl:'../../assets/images/apartment/p4-07.png',
-                hoverUrl:"../../assets/images/apartment/p4-07a.png",
+                imgUrl:require("@/assets/images/apartment/p4-07.png"),
+                hoverUrl:require("@/assets/images/apartment/p4-07a.png"),
                 txt:'智能网关',
                 alt:"智能网关"
             },
             {
-                imgUrl:'../../assets/images/apartment/p4-08.png',
-                hoverUrl:"../../assets/images/apartment/p4-08a.png",
+                imgUrl:require("@/assets/images/apartment/p4-08.png"),
+                hoverUrl:require("@/assets/images/apartment/p4-08a.png"),
                 txt:'智能门锁',
                 alt:"智能门锁"
             },
             {
-                imgUrl:'../../assets/images/apartment/p4-09.png',
-                hoverUrl:"../../assets/images/apartment/p4-09a.png",
+                imgUrl:require("@/assets/images/apartment/p4-09.png"),
+                hoverUrl:require("@/assets/images/apartment/p4-09a.png"),
                 txt:'智能水电表',
                 alt:"智能水电表"
             },
             {
-                imgUrl:'../../assets/images/apartment/p4-10.png',
-                hoverUrl:"../../assets/images/apartment/p4-10a.png",
+                imgUrl:require("@/assets/images/apartment/p4-10.png"),
+                hoverUrl:require("@/assets/images/apartment/p4-10a.png"),
                 txt:'空调/电视等家电',
                 alt:"空调/电视等家电"
             },
             {
-                imgUrl:'../../assets/images/apartment/p4-11.png',
-                hoverUrl:"../../assets/images/apartment/p4-11a.png",
+                imgUrl:require("@/assets/images/apartment/p4-11.png"),
+                hoverUrl:require("@/assets/images/apartment/p4-11a.png"),
                 txt:'灯光照明',
                 alt:"灯光照明"
             },
             {
-                imgUrl:'../../assets/images/apartment/p4-12.png',
-                hoverUrl:"../../assets/images/apartment/p4-12a.png",
+                imgUrl:require("@/assets/images/apartment/p4-12.png"),
+                hoverUrl:require("@/assets/images/apartment/p4-12a.png"),
                 txt:'窗帘等遮阳设备',
                 alt:"窗帘等遮阳设备"
             },

@@ -17,63 +17,63 @@ var app = new Vue({
         caseN:0,//当前显示案例的序列号
         leftImg:[
             {
-                imgUrl:"images/case/p1-lg.png",
+                imgUrl:require("@/assets/images/case/p1-lg.png"),
                 alt:"成功案例"
             },
             {
-                imgUrl:"images/case/p1-lg.png",
+                imgUrl:require("@/assets/images/case/p1-lg.png"),
                 alt:"成功案例"
             },
             {
-                imgUrl:"images/case/p1-lg.png",
+                imgUrl:require("@/assets/images/case/p1-lg.png"),
                 alt:"成功案例"
             },
             {
-                imgUrl:"images/case/p1-lg.png",
+                imgUrl:require("@/assets/images/case/p1-lg.png"),
                 alt:"成功案例"
             },
             {
-                imgUrl:"images/case/p1-lg.png",
+                imgUrl:require("@/assets/images/case/p1-lg.png"),
                 alt:"成功案例"
             },
             {
-                imgUrl:"images/case/p1-lg.png",
+                imgUrl:require("@/assets/images/case/p1-lg.png"),
                 alt:"成功案例"
             },
         ],
         rightImg:[
             {
-                imgUrl:"images/case/p1.png",
+                imgUrl:require("@/assets/images/case/p1.png"),
                 alt:"成功案例",
                 tit:"智能声控龙头",
                 txt:"抽拉厨房龙头AEO2B1202"
             },
             {
-                imgUrl:"images/case/p2.png",
+                imgUrl:require("@/assets/images/case/p2.png"),
                 alt:"成功案例",
                 tit:"智能声控龙头",
                 txt:"抽拉厨房龙头AEO2B1202"
             },
             {
-                imgUrl:"images/case/p3.png",
+                imgUrl:require("@/assets/images/case/p3.png"),
                 alt:"成功案例",
                 tit:"智能声控龙头",
                 txt:"抽拉厨房龙头AEO2B1202"
             },
             {
-                imgUrl:"images/case/p4.png",
+                imgUrl:require("@/assets/images/case/p4.png"),
                 alt:"成功案例",
                 tit:"智能声控龙头",
                 txt:"抽拉厨房龙头AEO2B1202"
             },
             {
-                imgUrl:"images/case/p5.png",
+                imgUrl:require("@/assets/images/case/p5.png"),
                 alt:"成功案例",
                 tit:"智能声控龙头",
                 txt:"抽拉厨房龙头AEO2B1202"
             },
             {
-                imgUrl:"images/case/p6.png",
+                imgUrl:require("@/assets/images/case/p6.png"),
                 alt:"成功案例",
                 tit:"智能声控龙头",
                 txt:"抽拉厨房龙头AEO2B1202"

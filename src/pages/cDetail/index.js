@@ -16,8 +16,8 @@ var app = new Vue({
     el: '#app',
     data: {
         banner:{
-            pcUrl:'images/caseDetail/c1-banner.png',
-            mobileUrl:'images/caseDetail/c1-banner.png',
+            pcUrl:require("@/assets/images/caseDetail/c1-banner.png"),
+            mobileUrl:require("@/assets/images/caseDetail/c1-banner.png"),
             alt:'智能检测仪',
         }, 
         activeData:"",
