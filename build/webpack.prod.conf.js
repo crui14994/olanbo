@@ -23,7 +23,7 @@ const webpackConfigProd = {
         path: path.resolve(__dirname, '../dist'),
         // 打包多出口文件
         filename: 'js/[name].[hash].js',
-        publicPath: '/'
+        publicPath: './'
     },
     plugins: [
         //删除dist目录

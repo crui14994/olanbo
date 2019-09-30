@@ -1,6 +1,6 @@
 // api
 // const BASE_URL = "http://47.105.45.120:8888";
-const BASE_URL = "http://api.olanboa.com";
+const BASE_URL = "https://api.olanboa.com";
 
 class Servers {
     constructor(BASE_URL) {

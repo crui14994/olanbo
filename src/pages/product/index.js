@@ -105,17 +105,24 @@ var app = new Vue({
             if (this.nowPage < this.totalPage) {
                 this.nowPage++;
                 this._getDevList();
+                this.scrollTo();
             }
         },
         prevPage() {
             if (this.nowPage > 1) {
                 this.nowPage--;
                 this._getDevList();
+                this.scrollTo();
             }
         },
         // 缓存数据
         _cacheData(num,datas){
             this.cacheData[num] = datas;
+        },
+        scrollTo(){
+            $("html,body").animate({
+                scrollTop: "0px"
+            }, 300);
         }
     }
 })

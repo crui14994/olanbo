@@ -56,6 +56,7 @@ var app = new Vue({
                         url: this.videoUrl,
                         videoInit: true,
                         playsinline: true,
+                        closeVideoDblclick:false,
                         height: "100%",
                         width: "100%",
                         poster: require('../../assets/images/home/pg-1-1.png')

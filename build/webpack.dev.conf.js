@@ -16,7 +16,7 @@ const webpackConfigDev = {
     devServer: {
         contentBase: path.resolve(__dirname, '../dist'),
         publicPath: '/',
-        host: "localhost",
+        host: "192.168.101.56",
         port: "8090",
         overlay: true, // 浏览器页面上显示错误
         // open: true, // 开启浏览器

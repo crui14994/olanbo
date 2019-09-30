@@ -7,7 +7,7 @@ window.lazySizesConfig.init = false;
 //引入懒加载
 import 'lazysizes';
 
-import {loadingEvent } from "../utils/index";
+import { loadingEvent } from "../utils/index";
 
 //值为是否显示加载动画
 loadingEvent(false);
@@ -31,13 +31,21 @@ class Main {
             if (n == 0) {
                 containerBox.animate({ left: "80%" }, 200);
                 headerNav.animate({ left: "80%" }, 200);
-                menu.animate({ left: "0%" }, 200);
+                menu.animate({ left: "0%" }, 200, function () {
+                    //禁止页面滚动
+                    $('body').css({ 'position': 'fixed', "width": "100%" });
+                });
                 n = 1;
+
             } else {
                 containerBox.animate({ left: "0%" }, 200);
                 headerNav.animate({ left: "0%" }, 200);
-                menu.animate({ left: "-80%" }, 200);
+                menu.animate({ left: "-80%" }, 200, function () {
+                    //开启页面滚动
+                    $("body").css({ "position": "initial", "height": "auto" });                  
+                });
                 n = 0;
+
             }
         })
     }
@@ -74,8 +82,8 @@ class Main {
         // $('#userEmail').change(uemailCheck);
         // $('#userTel').change(utelCheck);
         $('#content').change(contentCheck);
-        $('#userTel').bind('input propertychange', function() {   utelCheck()  }); 
-        $('#userEmail').bind('input propertychange', function() {   uemailCheck()  }); 
+        $('#userTel').bind('input propertychange', function () { utelCheck() });
+        $('#userEmail').bind('input propertychange', function () { uemailCheck() });
 
         //点击提交表单
         $("#addMsg").on("click", function () {
