@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require("webpack");
 const merge = require("webpack-merge");
-const glob = require("glob"); 
+const glob = require("glob");
 
 // 清除目录等
 const cleanWebpackPlugin = require("clean-webpack-plugin");

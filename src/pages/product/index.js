@@ -24,6 +24,8 @@ var app = new Vue({
         sysTypeId: null, //选中的设备类型
         activeData: null, //当前 展示的数据
         cacheData:{}, //缓存的数据
+        scrollTop:0, //页面顶部到page03的距离
+        svgIsShow:false
     },
     created() {
         this._getSysType();
@@ -32,6 +34,7 @@ var app = new Vue({
     },
     mounted() {
         lazySizes.init();
+        this.scrollTop = $(".breadcrumb").offset().top;
     },
     computed: {
         totalPage() { //总共要分的页数
@@ -64,6 +67,9 @@ var app = new Vue({
         },
         //获取设备列表
         _getDevList() {
+
+            this.svgIsShow = true; 
+
             let options = {
                 pageNum: this.nowPage,
                 pageSize: this.pageNum,
@@ -71,6 +77,9 @@ var app = new Vue({
             };
             //如果缓存数据中有当前页的数据就从缓存数据中获取，否则去请求数据
             if(this.cacheData[this.nowPage] !== undefined){
+                
+                this.svgIsShow = false; 
+
                 this.activeData = this.cacheData[this.nowPage];
                 return;
             }
@@ -87,6 +96,8 @@ var app = new Vue({
                     this.activeData = [];
                     this.total = 0;
                 }
+
+                this.svgIsShow = false; 
             })
         },
         //选择分类
@@ -120,8 +131,9 @@ var app = new Vue({
             this.cacheData[num] = datas;
         },
         scrollTo(){
+            let _this = this;
             $("html,body").animate({
-                scrollTop: "0px"
+                scrollTop: _this.scrollTop+"px"
             }, 300);
         }
     }

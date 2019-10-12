@@ -8,7 +8,7 @@
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <meta data-n-head="true" data-hid="keywords" name="keywords" content="">
     <meta name="description" content="" />
-    <title>欧朗博在线商城</title>
+    <title>欧朗博智能单品</title>
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.staticfile.org/animate.css/3.7.0/animate.min.css">
@@ -62,8 +62,8 @@
                     <div class="carousel-inner">
                         <div class="item crs-item" :class="{active:index==1}" v-for="(item,index) in banner"
                             :key="index">
-                            <img class="hidden-sm hidden-md hidden-lg lazyload" :data-src="item.mobileDataUrl" alt="欧朗博">
-                            <img class="hidden-xs lazyload" :data-src="item.pcDataUrl" alt="欧朗博">
+                            <img class="hidden-sm hidden-md hidden-lg lazyload" :src="item.mobileDataUrl" alt="欧朗博">
+                            <img class="hidden-xs lazyload" :src="item.pcDataUrl" alt="欧朗博">
                         </div>
                     </div>
                     <!-- 轮播（Carousel）导航 -->

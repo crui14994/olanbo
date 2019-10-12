@@ -38,7 +38,7 @@ var app = new Vue({
                 if (code === 200) {
                     this.activeData = res.data;
                      //设置页面title
-                     $("title").html(this.activeData.title+"成功案例详情-在线商城");
+                     $("title").html(this.activeData.title+"成功案例详情-欧朗博");
                 } else if (code === 300) {
                     this.activeData = "";
                 }

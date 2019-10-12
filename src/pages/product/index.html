@@ -8,7 +8,7 @@
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <meta data-n-head="true" data-hid="keywords" name="keywords" content="">
     <meta name="description" content="" />
-    <title>智能商品-在线商城</title>
+    <title>智能商品-欧朗博</title>
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.staticfile.org/animate.css/3.7.0/animate.min.css">
@@ -106,7 +106,7 @@
                     </ul>
                     <!-- //数据内容 -->
                     <div class="row wow fadeInUp">
-                        <div class="col-xs-6 col-sm-4 p3-item" v-for="(item,index) in activeData" :key="index">
+                        <div v-show = "!svgIsShow" class="col-xs-6 col-sm-4 p3-item" v-for="(item,index) in activeData" :key="index">
                             <div class="p3-item-img">
                                 <img class="img-responsive lazyload" :src="item.logoPath" :alt="item.devName">
                                 <a :href="'/details.html?id='+item.id"><span class="iconfont icon-jia"></span></a>
@@ -117,7 +117,12 @@
                             </div>
                         </div>
 
+                        <!-- svg -->
+                        <div class="svg" v-show = "svgIsShow">
+                            <img src="../../assets/images/loading.svg" width="40" alt="">
+                        </div>
                     </div>
+
                 </div>
             </section>
             <!-- 分页 -->

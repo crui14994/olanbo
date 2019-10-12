@@ -8,14 +8,58 @@
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <meta data-n-head="true" data-hid="keywords" name="keywords" content="">
     <meta name="description" content="" />
-    <title>成功案例-在线商城</title>
+    <title>成功案例-欧朗博</title>
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.staticfile.org/animate.css/3.7.0/animate.min.css">
     <!-- /字体样式文件 -->
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1218548_unporo92sek.css">
 
+    <style>
+        /* //用于案列切换动画 */
+        .ulTest {
+            overflow: hidden;
+            position: relative;
+        }
+        .ulTest li{
+            position: absolute;
+        }
+        .image-enter-active {
+            transform: translateX(0);
+            transition: all .6s ease;
+        }
 
+        .image-leave-active {
+            transform: translateX(-100%);
+            transition: all .6s ease;
+        }
+
+        .image-enter {
+            transform: translateX(100%);
+        }
+
+        .image-leave {
+            transform: translateX(0);
+        }
+
+        .image02-enter-active {
+            transform: translateX(0);
+            transition: all .6s ease;
+        }
+
+        .image02-leave-active {
+            transform: translateX(100%);
+            transition: all .6s ease;
+        }
+
+        .image02-enter {
+            transform: translateX(-100%);
+        }
+
+        .image02-leave {
+            transform: translateX(0);
+        }
+    </style>
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
     <!--[if lt IE 9]>
@@ -67,7 +111,8 @@
                     <!-- 轮播（Carousel）项目 -->
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img class="hidden-sm hidden-md hidden-lg" src="../../assets/images/case/banner.png" alt="欧朗博">
+                            <img class="hidden-sm hidden-md hidden-lg" src="../../assets/images/case/banner.png"
+                                alt="欧朗博">
                             <img class="hidden-xs" src="../../assets/images/case/banner.png" alt="欧朗博">
                             <div class="banner-box container">
                                 <div class="part-tit text-center wow fadeInUp">
@@ -138,7 +183,7 @@
                     </ul> -->
 
                     <transition-group tag="ul" class="ulTest" :name="transitionName">
-                        <li v-show="index01===mark" v-for="(item01,index01) in caseList" :key="index01" >
+                        <li v-show="index01===mark" v-for="(item01,index01) in caseList" :key="index01">
                             <div class="row transitionBody">
                                 <div class="col-xs-12 col-sm-5 p3-item-left p3-hover" @mouseenter="enter(index)"
                                     @mouseleave="leave()" v-for="(item,index) in item01" :key="index" v-if="index===0"

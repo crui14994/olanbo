@@ -67,7 +67,7 @@ var app = new Vue({
                     this.activeData = res.data;
                     this.typeId = res.data.typeId;
                      //设置页面title
-                     $("title").html(this.activeData.title+"解决方案详情-在线商城");
+                     $("title").html(this.activeData.title+"解决方案详情-欧朗博");
                 } else if (code === 300) {
                     this.activeData = "";
                     this.typeId = null;
