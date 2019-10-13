@@ -18,9 +18,8 @@ var app = new Vue({
                 {
                     pcImg:require("@/assets/images/hotel/banner@2x.png"),
                     mobileImg:require("@/assets/images/hotel/banner@2x.png"),
-                    title:"智慧医疗",
-                    desc:` 以“效率、舒适和节能”为导向，通过整合酒店的照明系统、遮阳系统、影音系统、环境系统<br>
-                    实现系统设备的智能互联和全闭环的智能服务和管理`
+                    title:"智能家居解决方案",
+                    desc:``
                 }
             ],
             typeId02:[
@@ -56,6 +55,9 @@ var app = new Vue({
     computed:{
         bannerActive(){
             return this.banner["typeId0"+this.typeId];
+        },
+        bannerTitle(){
+            return this.activeData.title
         }
     },
     methods:{

@@ -1,5 +1,8 @@
 @import "../../assets/css/reset.css";
 @import "../../assets/css/common.less";
+body{
+    background-color: #fff;
+}
 .pDetail {
     .part01 {
         #myCarousel {
@@ -38,6 +41,10 @@
         padding-bottom: 80px;
         .container{
             margin-top: 80px;
+            line-height: 24px;
+            h1,h2,h3,h4,h5,h6,p,span{
+                background-color: none!important;
+            }
             >div{
                 margin-left : -25px;
                 margin-right: -25px;
@@ -88,6 +95,7 @@
                             margin-top: 8px;
                             font-size : 13px;
                             color     : #6B6B6B;
+                            background-color: none;
                         }
                     }
                 }
@@ -116,7 +124,11 @@
                     }
                 }
             }
-
+            img{
+                max-width: 100%;
+                height: auto;
+                display: block;
+            }
 
         }
 

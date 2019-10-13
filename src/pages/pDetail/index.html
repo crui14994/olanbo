@@ -66,12 +66,12 @@
                     </ol> -->
                     <!-- 轮播（Carousel）项目 -->
                     <div class="carousel-inner">
-                        <div class="item active" v-for="(item,index) in bannerActive" :key="index">
+                        <div class="item active" v-for="(item,index) in banner.typeId01" :key="index">
                             <img class="hidden-sm hidden-md hidden-lg" :src="item.mobileImg" :alt="item.title">
                             <img class="hidden-xs" :src="item.pcImg" :alt="item.title">
                             <div class="banner-box container">
                                 <div class="part-tit text-center wow fadeInUp">
-                                    <h3 v-text="item.title"></h3>
+                                    <h3 v-text="bannerTitle"></h3>
                                     <p class="hidden-xs" v-html="item.desc">
                                     </p>
                                 </div>
@@ -94,7 +94,7 @@
             </section>
 
             <section class="part02">
-                <div class="container  container ql-editor" v-html="activeData.content">
+                <div class="container ql-editor" v-html="activeData.content">
                 </div>
             </section>
 
