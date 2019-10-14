@@ -49,6 +49,7 @@ var app = new Vue({
                 if (code === 200) {
                     // banner
                     this.banner = data.bannerList;
+                    console.log(this.banner)
                     // video
                     this.videoUrl = data.videoInfo.url;
                     this.player = new Player({

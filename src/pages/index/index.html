@@ -60,7 +60,7 @@
                 <div id="myCarousel" class="carousel slide">
                     <!-- 轮播（Carousel）项目 -->
                     <div class="carousel-inner">
-                        <div class="item crs-item" :class="{active:index==1}" v-for="(item,index) in banner"
+                        <div class="item crs-item" :class="{active:index==0}" v-for="(item,index) in banner"
                             :key="index">
                             <img class="hidden-sm hidden-md hidden-lg lazyload" :src="item.mobileDataUrl" alt="欧朗博">
                             <img class="hidden-xs lazyload" :src="item.pcDataUrl" alt="欧朗博">
@@ -111,7 +111,8 @@
                 <div class="container-fuild">
                     <div class="row p3-box">
                         <div class="col-xs-12 col-lg-6">
-                            <img class="img-responsive lazyload" data-src="../../assets/images/home/pg-2-1.png" alt="品牌介绍">
+                            <img class="img-responsive lazyload" data-src="../../assets/images/home/pg-2-1.png"
+                                alt="品牌介绍">
                         </div>
                         <div class="col-xs-12 col-lg-6"></div>
                     </div>
@@ -120,21 +121,36 @@
                         <div class="p3-item--message">
                             <div class="p3-i-m-txt">
                                 <h3>品牌介绍</h3>
-                                <p>用心，打造完美个性家居系统</p>
-                                <p>做一个有品质、有气质，受人喜欢、受人尊敬的品牌，这在LifeVC，是最核心的价值观。珍惜品牌声誉，用心为她们设计、生产最优质的产品，并提供真诚的服务。做一个有品质、有气质，受人喜欢、受人尊敬的品牌。
+                                <p>数字多媒体城市规划先导品牌<br>以创新科技和塑造城市发展规划为主观</p>
+                                <p>
+
+                                    · 专业<br>
+                                    为客户创造价值是专业能力，我们要持续提升专业水平，持续进行专业系统的构建和专业精神的传递。<br>
+                                    · 创新<br>
+                                    创新即是能力，也是态度。在创意行业里它是普世价值。技术需要创新，应用需要创新，想象力就是创新。<br>
+                                    · 未来<br>
+                                        持续打造乐于分享的工作环境，保持对品质的追求，自我驱动，不断开发研究，携手共进。 
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="row p3-item-mobile hidden-md hidden-lg">
                         <div class="col-xs-4">
-                            <img class="img-responsive lazyload" data-src="../../assets/images/home/pg-2-2.png" alt="品牌介绍">
+                            <img class="img-responsive lazyload" data-src="../../assets/images/home/pg-2-2.png"
+                                alt="品牌介绍">
                         </div>
                         <div class="col-xs-8">
                             <div class="p3-i-m-txt">
                                 <h3>品牌介绍</h3>
-                                <p>用心，打造完美个性家居系统</p>
-                                <p>做一个有品质、有气质，受人喜欢、受人尊敬的品牌，这在LifeVC，是最核心的价值观。珍惜品牌声誉，用心为她们设计、生产最优质的产品，并提供真诚的服务。做一个有品质、有气质，受人喜欢、受人尊敬的品牌。
+                                <p>数字多媒体城市规划先导品牌<br>以创新科技和塑造城市发展规划为主观</p>
+                                <p>
+
+                                    <!-- 专业<br> -->
+                                    为客户创造价值是专业能力，我们要持续提升专业水平，持续进行专业系统的构建和专业精神的传递。<br>
+                                    <!-- 创新<br>
+                                    创新即是能力，也是态度。在创意行业里它是普世价值。技术需要创新，应用需要创新，想象力就是创新。 -->
+                                    <!-- 未来
+                                            持续打造乐于分享的工作环境，保持对品质的追求，自我驱动，不断开发研究，携手共进。  -->
                                 </p>
                             </div>
                         </div>
@@ -165,11 +181,12 @@
                 <div class="container-fuild">
                     <div class="row p5-box">
                         <div class="col-xs-12 col-md-6 p5-left" v-if="recommendList02[0]">
-                            <a ><img class="img-responsive lazyload img-scale" :data-src="recommendList02[0].homeShowImg"
+                            <a><img class="img-responsive lazyload img-scale" :data-src="recommendList02[0].homeShowImg"
                                     :alt="recommendList02[0].devName"></a>
                             <div class="p5-l-layout">
                                 <div class="p5-l-txt wow fadeIn">
-                                    <h4 ><a :href="'/details.html?id='+recommendList02[0].id"  v-text="recommendList02[0].devName"></a></h4>
+                                    <h4><a :href="'/details.html?id='+recommendList02[0].id"
+                                            v-text="recommendList02[0].devName"></a></h4>
                                     <p></p>
                                     <p v-text="recommendList02[0].desc"></p>
                                 </div>
@@ -179,26 +196,30 @@
                             <div class="row" v-if="recommendList02[1]">
                                 <div class="col-xs-6 p5-item">
                                     <div class="p5-l-layout wow fadeInUp">
-                                        <h4 ><a :href="'/details.html?id='+recommendList02[1].id" v-text="recommendList02[1].devName"> </a></h4>
+                                        <h4><a :href="'/details.html?id='+recommendList02[1].id"
+                                                v-text="recommendList02[1].devName"> </a></h4>
                                         <p></p>
                                         <p v-text="recommendList02[1].desc"></p>
                                     </div>
                                 </div>
                                 <div class="col-xs-6 p-l-img">
-                                    <a ><img class="img-responsive lazyload img-scale"
-                                            :data-src="recommendList02[1].homeShowImg" :alt="recommendList02[1].devName"></a>
+                                    <a><img class="img-responsive lazyload img-scale"
+                                            :data-src="recommendList02[1].homeShowImg"
+                                            :alt="recommendList02[1].devName"></a>
                                     <div class="p5-l-layout02"></div>
                                 </div>
                             </div>
                             <div class="row" v-if="recommendList02[2]">
                                 <div class="col-xs-6 p-l-img">
-                                    <a ><img class="img-responsive lazyload img-scale"
-                                            :data-src="recommendList02[2].homeShowImg" :alt="recommendList02[2].devName"></a>
+                                    <a><img class="img-responsive lazyload img-scale"
+                                            :data-src="recommendList02[2].homeShowImg"
+                                            :alt="recommendList02[2].devName"></a>
                                     <div class="p5-l-layout02"></div>
                                 </div>
                                 <div class="col-xs-6  p5-item">
                                     <div class="p5-l-layout wow fadeInUp">
-                                        <h4 ><a :href="'/details.html?id='+recommendList02[2].id" v-text="recommendList02[2].devName"></a></h4>
+                                        <h4><a :href="'/details.html?id='+recommendList02[2].id"
+                                                v-text="recommendList02[2].devName"></a></h4>
                                         <p></p>
                                         <p v-text="recommendList02[2].desc"></p>
                                     </div>
@@ -222,7 +243,8 @@
                                 <div class="item" :class="{active:index==1}" v-for="(item,index) in exampleList">
                                     <img class="lazyload" :data-src="item.homeShowImg" alt="成功案例">
                                     <div class="carousel-caption">
-                                        <h5 class=" text-left"><a :href="'/cDetail.html?id='+item.id" v-text="item.title"></a></h5>
+                                        <h5 class=" text-left"><a :href="'/cDetail.html?id='+item.id"
+                                                v-text="item.title"></a></h5>
                                         <p class=" text-left hidden-xs hidden-sm" v-text="item.desc"></p>
                                     </div>
                                     <div class="more text-center">
