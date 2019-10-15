@@ -14,14 +14,36 @@
     <link rel="stylesheet" href="https://cdn.staticfile.org/animate.css/3.7.0/animate.min.css">
     <!-- /字体样式文件 -->
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1218548_3lm05eu2up2.css">
-
-
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
     <!--[if lt IE 9]>
       <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
+
+    <!-- <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+    <style>
+        .pace .pace-progress {
+            background: #1E92FB;
+            /*进度条颜色*/
+            height: 1px;
+        }
+
+        .pace .pace-progress-inner {
+            /* box-shadow: 0 0 10px #1E92FB, 0 0 5px #1E92FB; */
+            box-shadow: none!important;
+            /*阴影颜色*/
+        }
+
+        .pace .pace-activity {
+            border-top-color: #1E92FB;
+            /*上边框颜色*/
+            border-left-color: #1E92FB;
+            /*左边框颜色*/
+            display: none;
+        }
+    </style> -->
     <script>
         var _hmt = _hmt || [];
         (function () {
@@ -30,7 +52,6 @@
             var s = document.getElementsByTagName("script")[0];
             s.parentNode.insertBefore(hm, s);
         })();
-
     </script>
     <script>
         (function () {
@@ -49,7 +70,7 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" style="opacity: 0;">
         #include("../../common/mobileNav.html")
         <div class="container-box home">
             <div class="header_box">
@@ -129,7 +150,7 @@
                                     · 创新<br>
                                     创新即是能力，也是态度。在创意行业里它是普世价值。技术需要创新，应用需要创新，想象力就是创新。<br>
                                     · 未来<br>
-                                        持续打造乐于分享的工作环境，保持对品质的追求，自我驱动，不断开发研究，携手共进。 
+                                    持续打造乐于分享的工作环境，保持对品质的追求，自我驱动，不断开发研究，携手共进。
                                 </p>
                             </div>
                         </div>
@@ -241,7 +262,7 @@
                             <!-- 轮播（Carousel）项目 -->
                             <div class="carousel-inner">
                                 <div class="item" :class="{active:index==1}" v-for="(item,index) in exampleList">
-                                    <img class="lazyload" :data-src="item.homeShowImg" alt="成功案例">
+                                    <img class="lazyload" :src="item.homeShowImg" alt="成功案例">
                                     <div class="carousel-caption">
                                         <h5 class=" text-left"><a :href="'/cDetail.html?id='+item.id"
                                                 v-text="item.title"></a></h5>

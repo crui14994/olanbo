@@ -21,7 +21,6 @@ $(function () {
     });
 })
 
-
 var app = new Vue({
     el: '#app',
     data: {
@@ -33,7 +32,6 @@ var app = new Vue({
         exampleList: [], //案例列表
     },
     created() {
-
         this._getHomeInfo();
     },
     computed: {
@@ -48,8 +46,7 @@ var app = new Vue({
                 let { code, data } = res;
                 if (code === 200) {
                     // banner
-                    this.banner = data.bannerList;
-                    console.log(this.banner)
+                    this.banner = data.bannerList.sort(this.sortId);
                     // video
                     this.videoUrl = data.videoInfo.url;
                     this.player = new Player({
@@ -69,8 +66,6 @@ var app = new Vue({
                     this.recommendList02 = dataArr.slice(3);
                     // 案例列表
                     this.exampleList = data.exampleList;
-
-
                 }
             })
         },
@@ -96,6 +91,10 @@ var app = new Vue({
             var of = o.offset();
             var w = $(window);
             return !(w.scrollTop() > (of.top + o.outerHeight()) || (w.scrollTop() + w.height()) < of.top);
-        }
+        },
+        //比较器函数
+        sortId(a,b){  
+            return a.id-b.id; 
+         }
     }
 })

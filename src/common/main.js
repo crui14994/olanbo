@@ -16,6 +16,9 @@ class Main {
     constructor() {
     }
     init() {
+        // 表示文档结构已经加载完成（不包含图片等非文字媒体文件）将页面显示出来
+        $("#app").css({"opacity":1});
+        
         this.navToggle();
         this.floatBox();
         this.addMNsg();
@@ -42,7 +45,7 @@ class Main {
                 headerNav.animate({ left: "0%" }, 200);
                 menu.animate({ left: "-80%" }, 200, function () {
                     //开启页面滚动
-                    $("body").css({ "position": "initial", "height": "auto" });                  
+                    $("body").css({ "position": "initial", "height": "auto" });
                 });
                 n = 0;
 

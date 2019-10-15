@@ -20,11 +20,12 @@ class Servers {
         })
     }
     //获取设备类型列表
-    getSysType() {
+    getSysType(options) {
         return new Promise((resolve, reject) => {
             $.ajax({
                 url: this.url + "/smart/sysType/list",
                 type: "GET",
+                data:options,
                 dataType: "json",
                 success: res => {
                     resolve(res)

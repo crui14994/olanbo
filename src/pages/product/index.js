@@ -44,7 +44,16 @@ var app = new Vue({
     methods: {
         //获取设备类型列表
         _getSysType() {
-            server.getSysType().then(res => {
+
+            const STATUS_NUM = {
+                normal : 0 , //正常
+                del : 1 , //正常
+                disable : 2 , //正常
+            }
+            let options = {
+                status:STATUS_NUM.normal
+            }
+            server.getSysType(options).then(res => {
                 const { code } = res;
                 if (code === 200) {
                     this.SysType = res.data;
