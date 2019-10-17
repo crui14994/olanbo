@@ -67,7 +67,8 @@
                     <!-- 轮播（Carousel）项目 -->
                     <div class="carousel-inner">
                         <div class="item active crs-item">
-                            <img class="hidden-sm hidden-md hidden-lg" src="../../assets/images/product/banner@2x.png" alt="欧朗博">
+                            <img class="hidden-sm hidden-md hidden-lg" src="../../assets/images/product/banner@2x.png"
+                                alt="欧朗博">
                             <img class="hidden-xs" src="../../assets/images/product/banner@2x.png" alt="欧朗博">
                         </div>
                     </div>
@@ -106,7 +107,8 @@
                     </ul>
                     <!-- //数据内容 -->
                     <div class="row wow fadeInUp">
-                        <div v-show = "!svgIsShow" class="col-xs-6 col-sm-4 p3-item" v-for="(item,index) in activeData" :key="index">
+                        <div v-show="!svgIsShow" class="col-xs-6 col-sm-4 p3-item" v-for="(item,index) in activeData"
+                            :key="index">
                             <div class="p3-item-img">
                                 <img class="img-responsive lazyload" :src="item.logoPath" :alt="item.devName">
                                 <a :href="'/details.html?id='+item.id"><span class="iconfont icon-jia"></span></a>
@@ -118,7 +120,7 @@
                         </div>
 
                         <!-- svg -->
-                        <div class="svg" v-show = "svgIsShow">
+                        <div class="svg" v-show="svgIsShow">
                             <img src="../../assets/images/loading.svg" width="40" alt="">
                         </div>
                     </div>
@@ -132,8 +134,15 @@
                 </div>
                 <div class="container text-center" v-show="total!==0">
                     <ul class="pagination ">
-                        <li :class="{active:nowPage==item}" v-for="(item,index) in totalPage"><a @click="goToPage(item)"
-                                v-text="item"></a></li>
+                     
+                        <li :class="{active:nowPage==1}"><a @click="goToPage(1)" >1</a></li>
+                        <li v-if="nowPage>=5"><a>...</a></li>
+
+                        <li v-if="pagingShow(index+1)" :class="{active:nowPage==item}"
+                            v-for="(item,index) in totalPage"><a @click="goToPage(item)" v-text="item"></a></li>
+
+                        <li v-if="nowPage<totalPage-2"><a>...</a></li>
+                        <li :class="{active:nowPage==totalPage}"><a @click="goToPage(totalPage)" v-text="totalPage"></a></li>
 
                         <li class="aria"><a @click="prevPage">上一页</a></li>
                         <li class="aria"><a @click="nextPage">下一页</a></li>
