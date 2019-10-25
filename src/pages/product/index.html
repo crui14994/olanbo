@@ -132,7 +132,7 @@
                 <div class="container text-center" v-show="total===0">
                     <p>暂无数据</p>
                 </div>
-                <div class="container text-center" v-show="total!==0">
+                <div class="container text-center" v-show="totalPage>1">
                     <ul class="pagination ">
                      
                         <li :class="{active:nowPage==1}"><a @click="goToPage(1)" >1</a></li>
