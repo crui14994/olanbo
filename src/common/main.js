@@ -1,3 +1,4 @@
+import "babel-polyfill"
 import server from "../utils/api"
 
 //必须放在lazysizes.js加载前，设置lazysizes不自动执行，等数据加载后执行lazySizes.init();

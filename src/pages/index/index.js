@@ -47,6 +47,13 @@ var app = new Vue({
                 if (code === 200) {
                     // banner
                     this.banner = data.bannerList.sort(this.sortId);
+                    this.contrlVodeo();
+                    // 已推荐的优质单品
+                    let dataArr = data.smartDevDbList.reverse();
+                    this.recommendList01 = dataArr.slice(0, 3);
+                    this.recommendList02 = dataArr.slice(3);
+                    // 案例列表
+                    this.exampleList = data.exampleList;
                     // video
                     this.videoUrl = data.videoInfo.url;
                     this.player = new Player({
@@ -59,13 +66,6 @@ var app = new Vue({
                         width: "100%",
                         poster: require('../../assets/images/home/pg-1-1.png')
                     });
-                    this.contrlVodeo();
-                    // 已推荐的优质单品
-                    let dataArr = data.smartDevDbList.reverse();
-                    this.recommendList01 = dataArr.slice(0, 3);
-                    this.recommendList02 = dataArr.slice(3);
-                    // 案例列表
-                    this.exampleList = data.exampleList;
                 }
             })
         },

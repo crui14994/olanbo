@@ -2,6 +2,7 @@ import "./index.less"
 import main from "../../common/main"
 import server from "../../utils/api"
 
+
 $(function () {
     //切换导航状态
     $($(".nav-list >ul>li")[3]).addClass("nav-active").siblings().removeClass("nav-active");
@@ -12,6 +13,7 @@ $(function () {
 
 
 });
+
 
 var app = new Vue({
     el: '#app',
@@ -112,8 +114,8 @@ var app = new Vue({
             //输出新数组
             return result
         },
-        goToPage(id){
-            window.location.href = '/cDetail.html?id='+id;
+        goToPage(id) {
+            window.location.href = '/cDetail.html?id=' + id;
         },
     }
 })

@@ -1,6 +1,5 @@
 // api
-// const BASE_URL = "http://47.105.45.120:8888";
-const BASE_URL = "https://api.olanboa.com";
+const BASE_URL = process.env.NODE_ENV === "development" ? "http://192.168.101.129:8888" : "https://api.olanboa.com";
 
 class Servers {
     constructor(BASE_URL) {
@@ -25,7 +24,7 @@ class Servers {
             $.ajax({
                 url: this.url + "/smart/sysType/list",
                 type: "GET",
-                data:options,
+                data: options,
                 dataType: "json",
                 success: res => {
                     resolve(res)
@@ -63,6 +62,8 @@ class Servers {
     }
     //获取案例列表
     getExampleList(options) {
+
+
         return new Promise((resolve, reject) => {
             $.ajax({
                 url: this.url + "/web/examples/getList",
