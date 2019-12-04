@@ -1,5 +1,8 @@
 // api
 const BASE_URL = process.env.NODE_ENV === "development" ? "http://192.168.101.129:8888" : "https://api.olanboa.com";
+// const BASE_URL = process.env.NODE_ENV != "development" ? "http://192.168.101.129:8888" : "https://api.olanboa.com";
+
+jQuery.support.cors = true;
 
 class Servers {
     constructor(BASE_URL) {
@@ -12,8 +15,16 @@ class Servers {
                 url: this.url + "/smartHome/getHomeInfo",
                 type: "GET",
                 dataType: "json",
+                async: true,
+                cache: false,
+                crossDomain: true,
                 success: res => {
+                    // console.log(1)
                     resolve(res)
+                },
+                error: err => {
+                    // console.log(2,err)
+                    reject(err);
                 }
             })
         })
@@ -26,6 +37,9 @@ class Servers {
                 type: "GET",
                 data: options,
                 dataType: "json",
+                async: true,
+                cache: false,
+                crossDomain: true,
                 success: res => {
                     resolve(res)
                 }
@@ -40,6 +54,9 @@ class Servers {
                 type: "GET",
                 data: options,
                 dataType: "json",
+                async: true,
+                cache: false,
+                crossDomain: true,
                 success: res => {
                     resolve(res);
                 }
@@ -54,6 +71,9 @@ class Servers {
                 type: "GET",
                 data: { id },
                 dataType: "json",
+                async: true,
+                cache: false,
+                crossDomain: true,
                 success: res => {
                     resolve(res);
                 }
@@ -70,6 +90,9 @@ class Servers {
                 type: "GET",
                 data: options,
                 dataType: "json",
+                async: true,
+                cache: false,
+                crossDomain: true,
                 success: res => {
                     resolve(res);
                 }
@@ -84,6 +107,9 @@ class Servers {
                 type: "GET",
                 data: { id },
                 dataType: "json",
+                async: true,
+                cache: false,
+                crossDomain: true,
                 success: res => {
                     resolve(res);
                 }
@@ -98,6 +124,9 @@ class Servers {
                 type: "GET",
                 data: options,
                 dataType: "json",
+                async: true,
+                cache: false,
+                crossDomain: true,
                 success: res => {
                     resolve(res);
                 }
@@ -111,6 +140,9 @@ class Servers {
                 url: this.url + "/web/solutiontype/getList",
                 type: "GET",
                 dataType: "json",
+                async: true,
+                cache: false,
+                crossDomain: true,
                 success: res => {
                     resolve(res);
                 }
@@ -126,6 +158,9 @@ class Servers {
                 type: "GET",
                 data: { id },
                 dataType: "json",
+                async: true,
+                cache: false,
+                crossDomain: true,
                 success: res => {
                     resolve(res);
                 }
@@ -141,6 +176,9 @@ class Servers {
                 contentType: "application/json;",
                 dataType: "json",
                 data: JSON.stringify(options),
+                async: true,
+                cache: false,
+                crossDomain: true,
                 success: res => {
                     resolve(res);
                 }
@@ -156,6 +194,9 @@ class Servers {
                 contentType: "application/json;",
                 dataType: "json",
                 data: JSON.stringify(options),
+                async: true,
+                cache: false,
+                crossDomain: true,
                 success: res => {
                     resolve(res)
                 }

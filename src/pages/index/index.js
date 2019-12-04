@@ -67,6 +67,8 @@ var app = new Vue({
                         poster: require('../../assets/images/home/pg-1-1.png')
                     });
                 }
+            }).catch(err=>{
+                // console.log(err)
             })
         },
         // 视频控制
