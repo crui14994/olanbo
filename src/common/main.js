@@ -1,6 +1,8 @@
 import "babel-polyfill"
 import server from "../utils/api"
 
+import weChat from "../utils/weChat"
+
 //必须放在lazysizes.js加载前，设置lazysizes不自动执行，等数据加载后执行lazySizes.init();
 window.lazySizesConfig = window.lazySizesConfig || {};
 window.lazySizesConfig.init = false;
@@ -23,6 +25,13 @@ class Main {
         this.navToggle();
         this.floatBox();
         this.addMNsg();
+
+        //设置微信分享参数
+        weChat.share({
+            title: "欧朗博智能单品",
+            desc: "欧朗博智能平台 为客户提供一站式人工智能物联网解决方案。",
+            imgUrl: "http://static.52pkmir.cn/olanbo_pc_157829908600044.jpg"
+        });
     }
     //导航事件
     navToggle() {
