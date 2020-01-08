@@ -30,7 +30,7 @@ class Main {
         weChat.share({
             title: "欧朗博智能单品",
             desc: "欧朗博智能平台 为客户提供一站式人工智能物联网解决方案。",
-            imgUrl: "http://static.52pkmir.cn/olanbo_pc_157829908600044.jpg"
+            imgUrl: "http://static.52pkmir.cn/olanbo_pc_157844784800052.png"
         });
     }
     //导航事件
