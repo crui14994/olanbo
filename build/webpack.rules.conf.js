@@ -45,9 +45,9 @@ const rules = [{
                     outputPath: "images"
                 }
             },
-            // {
-            //     loader: 'image-webpack-loader', // 进行图片优化
-            // }
+            {
+                loader: 'image-webpack-loader', // 进行图片优化
+            }
         ]
     },
     {
