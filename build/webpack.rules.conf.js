@@ -1,32 +1,27 @@
 //分离css，webpack4推荐的分离css的插件
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const rules = [
-    {
+const rules = [{
         test: /\.js$/,
         exclude: /(node_modules)/,
         include: /src/, //限制范围，提高打包速度
-        use: [
-            {
-                loader: 'babel-loader',
-                options: {
-                    presets: ['@babel/preset-env',],
-                    plugins: ['@babel/transform-runtime']
-                }
+        use: [{
+            loader: 'babel-loader',
+            options: {
+                presets: ['@babel/preset-env', ],
+                plugins: ['@babel/transform-runtime']
             }
-        ]
+        }]
     },
     {
         test: /\.(css|scss|sass|less)$/,
-        use: process.env.NODE_ENV === "development" ? ["style-loader", "css-loader", "postcss-loader", "less-loader"] :
-            [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "less-loader"],
+        use: process.env.NODE_ENV === "development" ? ["style-loader", "css-loader", "postcss-loader", "less-loader"] : [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "less-loader"],
         include: /src/, //限制范围，提高打包速度
         exclude: /node_modules/
     },
     {
         test: /\.(htm|html)$/i,
-        use: [
-            {
+        use: [{
                 loader: 'html-withimg-loader?exclude=/static/',
             },
             {
@@ -40,8 +35,7 @@ const rules = [
     },
     {
         test: /\.(png|svg|jpg|gif|jpeg|ico)$/,
-        use: [
-            {
+        use: [{
                 loader: "url-loader",
                 options: {
                     limit: 10000, //小于这个时将会已base64位图片打包处理
@@ -51,9 +45,9 @@ const rules = [
                     outputPath: "images"
                 }
             },
-            {
-                loader: 'image-webpack-loader', // 进行图片优化
-            }
+            // {
+            //     loader: 'image-webpack-loader', // 进行图片优化
+            // }
         ]
     },
     {
